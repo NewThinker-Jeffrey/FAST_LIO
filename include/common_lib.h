@@ -35,9 +35,9 @@ using namespace Eigen;
 inline std::string __get_root_dir() {
     char* p = getenv("FAST_LIO_ROOT");
     if (p == NULL) {
-        return DEFAULT_FAST_LIO_ROOT;
+        return string(DEFAULT_FAST_LIO_ROOT);
     }
-    return string(p);
+    return string(p) + "/";
 }
 
 inline std::string get_root_dir() {
